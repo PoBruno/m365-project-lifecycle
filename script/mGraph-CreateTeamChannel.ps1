@@ -1,5 +1,4 @@
-## Importar módulo Microsoft Graph Teams se não estiver já importado
-Import-Module Microsoft.Graph.Teams
+
 
 ## Parâmetros de conexão com Microsoft Graph
 $clientID = $clientID
@@ -28,18 +27,21 @@ catch {
 
 ## Função para obter o ID de um usuário a partir de um endereço de e-mail
 #$email = "rob@monga.dev.br"
+<#
+
 function Get-UserId($email) {
     $filter = "userPrincipalName eq '$email'"
     $user = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/users?`$filter=$filter" -Headers @{Authorization = "Bearer $accessToken" }
     return $user.value[0].id
 }
 
+#>
+
 function Get-UserId($email) {
     $filter = "imAddresses/any(i:i eq '$email')"
     $user = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/users?`$filter=$filter" -Headers @{Authorization = "Bearer $accessToken" }
     return $user.value[0].id
 }
-
 
 ## Função para adicionar um usuário ao grupo se não estiver já presente
 function Add-UserToGroup($userIds, $groupId) {
@@ -82,7 +84,7 @@ $csvUsers | ForEach-Object {
     $members += @{
         "@odata.type"     = "#microsoft.graph.aadUserConversationMember"
         "user@odata.bind" = "https://graph.microsoft.com/v1.0/users('$userId')"
-        roles             = @("member")
+        roles             = @("owner")
     }
 }
 
@@ -101,12 +103,12 @@ $params = @{
 ## Criar o canal no Teams
 $teamId = $GroupID
 $uri = "https://graph.microsoft.com/v1.0/teams/$teamId/channels"
+
 $response = Invoke-RestMethod -Uri $uri -Method POST -Headers @{Authorization = "Bearer $accessToken"; "Content-Type" = "application/json" } -Body ($params | ConvertTo-Json -Depth 10)
 
 if ($response) {
     write-host "Channel created successfully."
-}
-else {
+} else  {
     write-error "Could not create the channel."
 }
 
