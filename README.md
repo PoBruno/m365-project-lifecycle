@@ -54,7 +54,7 @@ O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta pa
 
 4. O script irá criar o plano no Microsoft Planner, os buckets e tarefas associadas, e o canal no Microsoft Teams.
 5. Verifique se o plano e canal foram criados com sucesso.
-5. Execute o script `Prepare-Teams-Channel.ps1` fornecendo os parâmetros necessários:
+5. Execute o script `Prepare-TeamChannel.ps1` fornecendo os parâmetros necessários:
     
     ```powershell
     .\Prepare-TeamChannel.ps1 `
