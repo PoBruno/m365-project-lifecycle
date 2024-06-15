@@ -4,19 +4,6 @@
 
 Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
-### Objetivo e Visão Futura
-
-O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos, facilitando a colaboração e a execução eficiente através das seguintes etapas:
-
-- **Automação com PowerShell**: Desenvolver e testar a lógica central do processo de gerenciamento de projetos utilizando PowerShell.
-- **Integração Completa**: Integrar Microsoft Planner para planejamento de tarefas, SharePoint para armazenamento e colaboração de documentos, e Teams para comunicação e execução de tarefas.
-- **Expansão Funcional**: Futuramente, adicionar funcionalidades como atribuição de datas de início e término, responsáveis por tarefas, e outros campos personalizados conforme necessário.
-- **Transição para Power Automate**: Uma vez validada a lógica de automação e integração no PowerShell, migrar para o Power Automate para uma solução mais escalável e acessível.
-
-### Próximos Passos
-
-Explore o script fornecido para entender a base de automação e utilize os modelos de CSV na pasta [./data](./data) para iniciar e adaptar seus próprios projetos. Este repositório servirá como base para o desenvolvimento contínuo e aprimoramento do ciclo de vida de gerenciamento de projetos no ecossistema Microsoft.
-
 ## Pré-requisitos
 
 - PowerShell versão 7 ou superior
@@ -28,6 +15,23 @@ Explore o script fornecido para entender a base de automação e utilize os mode
 - Cria buckets no plano com base em dados de um arquivo CSV
 - Cria tarefas nos buckets também baseadas no arquivo CSV
 - Cria um canal no Microsoft Teams associado ao plano
+- Adiciona uma tab do Planner ao canal do Teams
+
+<br>
+
+### Objetivo e Visão Futura
+
+---
+
+O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos, facilitando a colaboração e a execução eficiente através das seguintes etapas:
+
+- **Automação com PowerShell**: Desenvolver e testar a lógica central do processo de gerenciamento de projetos utilizando PowerShell.
+- **Integração Completa**: Integrar Microsoft Planner para planejamento de tarefas, SharePoint para armazenamento e colaboração de documentos, e Teams para comunicação e execução de tarefas.
+- **Expansão Funcional**: Futuramente, adicionar funcionalidades como atribuição de datas de início e término, responsáveis por tarefas, e outros campos personalizados conforme necessário.
+- **Transição para Power Automate**: Uma vez validada a lógica de automação e integração no PowerShell, migrar para o Power Automate para uma solução mais escalável e acessível.
+
+<br>
+
 
 ## Uso
 
@@ -101,11 +105,12 @@ Para exemplos práticos de como estruturar seu arquivo CSV e detalhes sobre como
 
 
 
+## Contribuições
 
+Se você está interessado em contribuir para este projeto, estamos felizes em receber suas sugestões, correções de bugs e novas funcionalidades. Para começar, siga as orientações abaixo:
 
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para sugestões ou problemas encontrados.
+- Leia nosso [guia de contribuição](CONTRIBUTING.md) para entender como contribuir.
+- **Abra uma issue** para discutir o que você gostaria de mudar antes de enviar um pull request.
 
 ## Autor
 
@@ -113,7 +118,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para suge
 
 ## Licença
 
-Este projeto está licenciado sob a Licença [MIT](LICENSE).
+Este projeto está licenciado sob a [Licença MIT](./LICENSE.md).
 
 ## Agradecimentos
 
