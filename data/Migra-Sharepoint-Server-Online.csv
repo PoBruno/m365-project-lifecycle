@@ -1,0 +1,66 @@
+Task;Bucket;Details
+Identificar Stakeholders;Levantamento de Requisitos;Identificar os stakeholders chave.
+Realizar Reuniões de Requisitos;Levantamento de Requisitos;Realizar reuniões para entender os requisitos do negócio.
+Documentar Requisitos Funcionais;Levantamento de Requisitos;Documentar os requisitos funcionais.
+Documentar Requisitos Não Funcionais;Levantamento de Requisitos;Documentar os requisitos não funcionais.
+Aprovar Requisitos Documentados;Levantamento de Requisitos;Obter aprovações dos requisitos documentados.
+Inventariar Conteúdo Atual;Avaliação de Conteúdo;Inventariar o conteúdo atual do SharePoint Server.
+Categorizar Conteúdo;Avaliação de Conteúdo;Categorizar o conteúdo em relevantes e obsoletos.
+Determinar Tamanho dos Dados;Avaliação de Conteúdo;Determinar o tamanho e complexidade dos dados a serem migrados.
+Desenvolver Relatórios de Avaliação;Avaliação de Conteúdo;Desenvolver relatórios de avaliação de conteúdo.
+Identificar Scripts Customizados;Identificação de Personalizações;Identificar scripts customizados no SharePoint Server.
+Mapear Workflows Personalizados;Identificação de Personalizações;Mapear workflows personalizados.
+Documentar Webparts Customizadas;Identificação de Personalizações;Documentar webparts customizadas.
+Gerar Relatório de Personalizações;Identificação de Personalizações;Gerar relatório das personalizações identificadas.
+Inventariar Permissões Atuais;Avaliação de Permissões;Inventariar as permissões atuais no SharePoint Server.
+Mapear Permissões para Online;Avaliação de Permissões;Mapear as permissões para o SharePoint Online.
+Documentar Alterações de Permissões;Avaliação de Permissões;Documentar alterações de permissões necessárias.
+Desenvolver Relatório de Permissões;Avaliação de Permissões;Desenvolver relatório de permissões.
+Definir Abordagem de Migração;Desenvolvimento de Estratégia de Migração;Definir a abordagem de migração (big bang ou incremental).
+Elaborar Plano de Migração;Desenvolvimento de Estratégia de Migração;Elaborar plano detalhado de migração.
+Identificar Ferramentas de Migração;Desenvolvimento de Estratégia de Migração;Identificar ferramentas de migração adequadas.
+Documentar Estratégia de Fallback;Desenvolvimento de Estratégia de Migração;Documentar estratégia de fallback.
+Criar Estrutura de Sites;Configuração do Ambiente do SharePoint Online;Criar estrutura de sites no SharePoint Online.
+Configurar Bibliotecas de Documentos;Configuração do Ambiente do SharePoint Online;Configurar bibliotecas de documentos.
+Configurar Listas e Aplicativos;Configuração do Ambiente do SharePoint Online;Configurar listas e aplicativos necessários.
+Configurar Permissões Básicas;Configuração do Ambiente do SharePoint Online;Configurar permissões básicas.
+Configurar Grupos de Segurança;Configuração de Permissões no SharePoint Online;Configurar grupos de segurança.
+Atribuir Permissões aos Grupos;Configuração de Permissões no SharePoint Online;Atribuir permissões aos grupos configurados.
+Validar Configurações de Permissão;Configuração de Permissões no SharePoint Online;Validar configurações de permissão.
+Documentar Configurações de Permissão;Configuração de Permissões no SharePoint Online;Documentar configurações de permissão.
+Limpar Dados Obsoletos;Preparação dos Dados;Limpar dados obsoletos.
+Realizar Backup dos Dados;Preparação dos Dados;Realizar backup dos dados.
+Converter Formatos de Dados;Preparação dos Dados;Converter formatos de dados conforme necessário.
+Testar Scripts de Migração;Preparação dos Dados;Testar scripts de migração.
+Executar Scripts de Migração;Migração de Conteúdo;Executar scripts de migração.
+Monitorar Progresso da Migração;Migração de Conteúdo;Monitorar progresso da migração.
+Resolver Problemas de Migração;Migração de Conteúdo;Resolver problemas de migração.
+Documentar Resultados da Migração;Migração de Conteúdo;Documentar resultados da migração.
+Conduzir Validação de Dados;Validação pós-migração;Conduzir validação de dados migrados.
+Comparar Dados de Origem e Destino;Validação pós-migração;Comparar dados de origem e destino.
+Documentar Problemas Encontrados;Validação pós-migração;Documentar problemas encontrados.
+Gerar Relatório de Validação Final;Validação pós-migração;Gerar relatório de validação final.
+Conduzir Testes de Usabilidade;Testes de Usabilidade;Conduzir testes de usabilidade com usuários chave.
+Documentar Feedback de Usabilidade;Testes de Usabilidade;Documentar feedback de usabilidade.
+Implementar Ajustes Baseados no Feedback;Testes de Usabilidade;Implementar ajustes com base no feedback.
+Realizar Testes Finais de Usabilidade;Testes de Usabilidade;Realizar testes finais de usabilidade.
+Desenvolver Material de Treinamento;Treinamento de Usuários;Desenvolver material de treinamento.
+Conduzir Treinamento para Administradores;Treinamento de Usuários;Conduzir sessões de treinamento para administradores.
+Conduzir Treinamento para Usuários Finais;Treinamento de Usuários;Conduzir sessões de treinamento para usuários finais.
+Documentar Participação e Feedback de Treinamento;Treinamento de Usuários;Documentar participação e feedback de treinamento.
+Configurar Monitoramento Contínuo;Monitoramento pós-implantação;Configurar monitoramento contínuo do SharePoint Online.
+Realizar Auditorias de Segurança;Monitoramento pós-implantação;Realizar auditorias de segurança e conformidade.
+Monitorar Performance do Sistema;Monitoramento pós-implantação;Monitorar performance do sistema.
+Documentar Resultados de Monitoramento;Monitoramento pós-implantação;Documentar resultados de monitoramento.
+Estabelecer Canais de Suporte;Suporte pós-implantação;Estabelecer canais de suporte para usuários.
+Documentar Problemas e Soluções Frequentes;Suporte pós-implantação;Documentar problemas e soluções frequentes.
+Conduzir Revisões Periódicas de Suporte;Suporte pós-implantação;Conduzir revisões periódicas de suporte.
+Atualizar Documentação de Suporte;Suporte pós-implantação;Atualizar documentação de suporte conforme necessário.
+Identificar Áreas de Melhoria Contínua;Otimização e Melhorias Contínuas;Identificar áreas de melhoria contínua.
+Implementar Melhorias Identificadas;Otimização e Melhorias Contínuas;Implementar melhorias conforme identificado.
+Monitorar Impacto das Melhorias;Otimização e Melhorias Contínuas;Monitorar impacto das melhorias.
+Documentar Melhorias Implementadas;Otimização e Melhorias Contínuas;Documentar melhorias implementadas.
+Conduzir Reunião de Encerramento do Projeto;Encerramento do Projeto;Conduzir reunião de encerramento do projeto.
+Documentar Lições Aprendidas;Encerramento do Projeto;Documentar lições aprendidas.
+Obter Aprovações Finais;Encerramento do Projeto;Obter aprovações finais do projeto.
+Gerar Relatório Final do Projeto;Encerramento do Projeto;Gerar relatório final do projeto.

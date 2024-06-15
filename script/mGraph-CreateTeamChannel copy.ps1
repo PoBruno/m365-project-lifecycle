@@ -94,10 +94,8 @@ Add-UserToGroup -userIds $userIds -groupId $GroupID
 ## Parâmetros do canal
 $params = @{
     "@odata.type"  = "#Microsoft.Graph.channel"
-    membershipType = "private"
     displayName    = $channelDisplayName
     description    = $channelDescription
-    members        = $members
 }
 
 ## Criar o canal no Teams
