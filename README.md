@@ -37,7 +37,7 @@ O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta pa
 
 1. Clone este repositório em sua máquina local.
     * `git clone https://github.com/PoBruno/m365-project-lifecycle.git`
-    * `cd m365-project-lifecycle`
+    * `cd m365-project-lifecycle/Scripts/`
 2. Abra o PowerShell (versão 7 ou superior).
 3. Execute o script `Prepare-Plan-Channel.ps1` fornecendo os parâmetros necessários:
     
