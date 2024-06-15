@@ -1,8 +1,13 @@
 # Script PowerShell para Criar Plano e Canais no Microsoft Teams
 
+
 ## Descrição
 
 Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
+
+
+![Teams Plan](./images/TeamsChannelPlan.png)
+
 
 ## Pré-requisitos
 
@@ -18,6 +23,8 @@ Este script em PowerShell automatiza a criação de um plano no Microsoft Planne
 - Adiciona uma tab do Planner ao canal do Teams
 
 <br>
+
+
 
 ### Objetivo e Visão Futura
 
