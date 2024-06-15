@@ -1,0 +1,6 @@
+# Folder for environment variables
+.env/*
+.env/env.ps1
+
+# Folder for node modules
+node_modules/*
