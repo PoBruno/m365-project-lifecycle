@@ -83,7 +83,6 @@ Antes de executar o script, é necessário configurar um aplicativo no Azure AD 
     - Copie o valor do segredo gerado. Este será usado como `$clientSecret` no script PowerShell.
 
 
-## Uso
 
 ## Uso
 
