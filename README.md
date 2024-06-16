@@ -140,15 +140,7 @@ Antes de executar o script, é necessário configurar um aplicativo no Azure AD 
 
 5. Verifique se todas as operações foram executadas com sucesso.
 
-
-## Parâmetros
-
-- **clientID**: ID do cliente da aplicação Azure AD.
-- **tenantID**: ID do tenant da aplicação Azure AD.
-- **clientSecret**: Segredo do cliente da aplicação Azure AD.
-- **csvFilePath**: Caminho para o arquivo CSV que contém as tarefas e buckets.
-- **PlanName**: Nome do plano a ser criado no Microsoft Planner.
-- **GroupID**: ID do grupo Microsoft 365 ao qual o plano e canal serão associados.
+<br>
 
 ## Modelos de Planos em CSV
 
@@ -174,6 +166,63 @@ Para exemplos práticos de como estruturar seu arquivo CSV e detalhes sobre como
 
 
 
+## Parâmetros
+
+### -clientID
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** ID do cliente usado para autenticação no Azure AD.
+
+### -tenantID
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** ID do locatário (tenant) usado para autenticação no Azure AD.
+
+### -clientSecret
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** Segredo do cliente usado para autenticação no Azure AD.
+
+### -GroupID
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** ID do grupo do Microsoft Teams onde o plano e os canais serão criados.
+
+### -PlanName
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** Nome do plano que será criado no Microsoft Planner.
+
+### -csvFilePath
+
+- **Tipo:** String
+- **Obrigatório:** Sim
+- **Descrição:** Caminho do arquivo CSV contendo as tarefas e os buckets a serem importados.
+
+### -teamsTabName
+
+- **Tipo:** String
+- **Obrigatório:** Não (Padrão: "Planner")
+- **Descrição:** Nome da aba do Teams onde o Planner será adicionado.
+
+### -channelDisplayName
+
+- **Tipo:** String
+- **Obrigatório:** Não (Padrão: Nome do plano)
+- **Descrição:** Nome do canal a ser criado no Teams.
+
+### -channelDescription
+
+- **Tipo:** String
+- **Obrigatório:** Não (Padrão: "Canal para gerenciamento de tarefas do Planner - PlanName")
+- **Descrição:** Descrição do canal a ser criado no Teams.
+
+<br>
 
 ## Contribuições
 
