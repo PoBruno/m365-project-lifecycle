@@ -326,7 +326,7 @@ function Add-PlannerTabToChannel {
 
 # Importar o arquivo CSV
 if (Test-Path $csvFilePath) {
-    $csv = Import-Csv $csvFilePath
+    $csv = Import-Csv $csvFilePath -Delimiter ";"
 } else {
     Write-Error "Arquivo CSV não encontrado. Verifique o caminho e tente novamente."
     exit
