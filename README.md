@@ -39,43 +39,84 @@ O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta pa
 
 <br>
 
+## Configuração do Aplicativo no Azure AD
+
+Antes de executar o script, é necessário configurar um aplicativo no Azure AD para autenticar e autorizar as chamadas à API do Microsoft Graph.
+
+### Passos para Criar um App Registration:
+
+1. **Acessar o Portal do Azure:**
+    
+    - Acesse [https://portal.azure.com](https://portal.azure.com).
+2. **Criar um novo App Registration:**
+    
+    - No portal do Azure, navegue até "Azure Active Directory" > "App registrations" > "New registration".
+    - Forneça um nome para o aplicativo e escolha a opção de conta adequada.
+3. **Configurar as Permissões de API (Microsoft Graph):**
+    
+    - Após criar o aplicativo, navegue até "API permissions".
+    - Clique em "Add a permission" e selecione "Microsoft Graph".
+
+4. **Adicionar Permissões (Scope) do Microsoft Graph:**
+    
+    - Para adicionar permissões do Microsoft Graph, clique em "Add a permission".
+    - Selecione "Microsoft Graph" > "Application permissions".
+    <br><br>
+    - Application Permissions (Permissões de Aplicativo):
+
+        - **Group.ReadWrite.All**: Permite que o aplicativo leia e escreva em todos os grupos.
+        - **Group.Read.All**: Permite que o aplicativo leia todos os grupos.
+        - **User.Read.All**: Permite que o aplicativo leia todos os usuários.
+        - **Directory.ReadWrite.All**: Permite que o aplicativo leia e escreva em todos os dados do diretório.
+        - **Tasks.ReadWrite**: Permite que o aplicativo leia e escreva tarefas no Planner.
+        - **Channel.ReadWrite.All**: Permite que o aplicativo leia e escreva em todos os canais do Microsoft Teams.
+    <br><br>
+    
+5. **Conceder Permissões:**
+    
+    - Após adicionar as permissões, você precisará concedê-las. Clique em "Grant admin consent for [tenant]" para garantir que as permissões sejam aplicadas ao locatário.
+6. **Gerar Client Secret:**
+    
+    - Vá para "Certificates & secrets" no menu do aplicativo no portal do Azure.
+    - Em "Client secrets", clique em "New client secret".
+    - Forneça uma descrição e escolha a duração da expiração do segredo.
+    - Copie o valor do segredo gerado. Este será usado como `$clientSecret` no script PowerShell.
+
 
 ## Uso
 
-1. Clone este repositório em sua máquina local.
-    * `git clone https://github.com/PoBruno/m365-project-lifecycle.git`
-    * `cd m365-project-lifecycle/Scripts/`
-2. Abra o PowerShell (versão 7 ou superior).
-3. Execute o script `Prepare-Plan-Channel.ps1` fornecendo os parâmetros necessários:
-    
+## Uso
+
+1. Clone este repositório em sua máquina local:
+    ```bash
+    #Clonar o repositorio
+    git clone https://github.com/PoBruno/m365-project-lifecycle.git
+    #Acessar a pasta Scripts
+    cd m365-project-lifecycle/Scripts/
+    ```
+
+2. Configuração do Aplicativo no Azure AD:
+    - Siga os passos acima para criar um App Registration, adicionar permissões do Microsoft Graph e gerar um Client Secret.
+
+3. Abra o PowerShell (versão 7 ou superior).
+
+4. Execute o script `Create-PlannerAndTeamsChannel.ps1` fornecendo os parâmetros necessários:
+
     ```powershell
-    .\Prepare-Plan-Channel.ps1 `
+    .\Create-PlannerAndTeamsChannel.ps1 `
         -clientID $clientID `
         -tenantID $tenantID `
         -clientSecret $clientSecret `
-        -csvfilepath $csvfilepath `
+        -csvFilePath $csvFilePath `
         -PlanName $PlanName `
-        -GroupID $groupID
+        -GroupID $groupID `
+        [-teamsTabName $teamsTabName] `
+        [-channelDisplayName $channelDisplayName] `
+        [-channelDescription $channelDescription]
     ```
-    > Certifique-se de substituir os valores das variáveis pelos valores apropriados.
+    Certifique-se de substituir os valores das variáveis pelos valores apropriados.
 
-4. O script irá criar o plano no Microsoft Planner, os buckets e tarefas associadas, e o canal no Microsoft Teams.
-5. Verifique se o plano e canal foram criados com sucesso.
-5. Execute o script `Prepare-TeamChannel.ps1` fornecendo os parâmetros necessários:
-    
-    ```powershell
-    .\Prepare-TeamChannel.ps1 `
-        -clientID $clientID `
-        -tenantID $tenantID `
-        -clientSecret $clientSecret `
-        -channelDisplayName $channelDisplayName `
-        -channelDescription $channelDescription `
-        -groupID $groupID
-    ```
-    > Certifique-se de substituir os valores das variáveis pelos valores apropriados.
-
-6. O script irá criar o canal no Microsoft Teams e adicionar a tab do Planner.
-7. Verifique se o canal foi criado com sucesso e se a tab do Planner foi adicionada.
+5. Verifique se todas as operações foram executadas com sucesso.
 
 
 ## Parâmetros
