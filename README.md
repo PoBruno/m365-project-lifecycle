@@ -1,10 +1,34 @@
 # Script PowerShell para Criar Plano e Canais no Microsoft Teams
 
-
 ## Descrição
 
 Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
+> **Nota:** Através de templates de projetos em CSV, é possível criar um banco de templates para diferentes tipos de projetos, facilitando a criação de planos e canais de forma rápida e padronizada.
+
+## Exemplo de Template: Projeto Migração SQL Server
+`\data\Template_MigraSQL.csv`
+
+|Task|Bucket|Details|
+|---|---|---|
+|Identificar Stakeholders|Planejamento|Identificar os stakeholders chave para o projeto de migração do SQL Server.|
+|Definir Objetivos do Projeto|Planejamento|Definir objetivos e metas claras para a migração do SQL Server.|
+|Elaborar Cronograma|Planejamento|Elaborar um cronograma detalhado para a migração.|
+|Analisar Infraestrutura Atual|Avaliação|Analisar a infraestrutura atual do SQL Server.|
+|Inventariar Banco de Dados|Avaliação|Inventariar todos os bancos de dados que serão migrados.|
+|Identificar Dependências|Avaliação|Identificar dependências e integrações com outros sistemas.|
+|Realizar Backup Completo|Pré-Migração|Realizar um backup completo dos bancos de dados.|
+|Configurar Novo Ambiente|Pré-Migração|Configurar o novo ambiente de SQL Server.|
+|Executar Testes de Migração|Pré-Migração|Executar testes de migração para garantir que tudo funcione corretamente.|
+|Migrar Dados|Migração|Migrar os dados do ambiente antigo para o novo ambiente de SQL Server.|
+|Validar Dados Migrados|Migração|Validar se todos os dados foram migrados corretamente.|
+|Ajustar Configurações Pós-Migração|Pós-Migração|Ajustar configurações e otimizar o novo ambiente.|
+|Realizar Testes de Desempenho|Pós-Migração|Realizar testes de desempenho no novo ambiente de SQL Server.|
+|Treinar Usuários e Administradores|Pós-Migração|Treinar usuários e administradores no uso do novo sistema.|
+|Obter Aprovação Final|Encerramento|Obter aprovação final dos stakeholders após a migração.|
+|Documentar Lições Aprendidas|Encerramento|Documentar lições aprendidas e realizar um encerramento formal do projeto.|
+
+## Imagem Exemplo
 
 ![Teams Plan](./images/TeamsChannelPlan.png)
 
