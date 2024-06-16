@@ -144,7 +144,7 @@ Antes de executar o script, é necessário configurar um aplicativo no Azure AD 
 
 ## Modelos de Planos em CSV
 
-O arquivo CSV deve conter as seguintes colunas obrigatórias para importação no Planner: `TaskName`, `BucketName` e `Details`. Templates de arquivos CSV estão disponíveis na pasta [./data](./data).
+O arquivo CSV deve ter como delimitador ponto e virgula ``;``, pois desse modo podemos usar ``,`` para o campo destinado a descrição da tarefa. Deve conter as seguintes colunas para importação no Planner: `TaskName`, `BucketName` e `Details`. Templates de arquivos CSV estão disponíveis na pasta [./data](./data).
 
 ### Estrutura do CSV
 
@@ -168,55 +168,55 @@ Para exemplos práticos de como estruturar seu arquivo CSV e detalhes sobre como
 
 ## Parâmetros
 
-### -clientID
+### `-clientID`
 
 - **Tipo:** String
 - **Obrigatório:** Sim
 - **Descrição:** ID do cliente usado para autenticação no Azure AD.
 
-### -tenantID
+### ``-tenantID``
 
 - **Tipo:** String
 - **Obrigatório:** Sim
 - **Descrição:** ID do locatário (tenant) usado para autenticação no Azure AD.
 
-### -clientSecret
+### ``-clientSecret``
 
 - **Tipo:** String
 - **Obrigatório:** Sim
 - **Descrição:** Segredo do cliente usado para autenticação no Azure AD.
 
-### -GroupID
+### ``-GroupID``
 
 - **Tipo:** String
 - **Obrigatório:** Sim
 - **Descrição:** ID do grupo do Microsoft Teams onde o plano e os canais serão criados.
 
-### -PlanName
+### ``-PlanName``
 
 - **Tipo:** String
 - **Obrigatório:** Sim
 - **Descrição:** Nome do plano que será criado no Microsoft Planner.
 
-### -csvFilePath
+### ``-csvFilePath``
 
 - **Tipo:** String
 - **Obrigatório:** Sim
-- **Descrição:** Caminho do arquivo CSV contendo as tarefas e os buckets a serem importados.
+- **Descrição:** Caminho do arquivo CSV contendo as tarefas e os buckets a serem importados. O CSV precisa conter o formato `TaskName;BucketName;Details`, hearder e delimitador ``;``.
 
-### -teamsTabName
+### ``-teamsTabName``
 
 - **Tipo:** String
 - **Obrigatório:** Não (Padrão: "Planner")
 - **Descrição:** Nome da aba do Teams onde o Planner será adicionado.
 
-### -channelDisplayName
+### ``-channelDisplayName``
 
 - **Tipo:** String
 - **Obrigatório:** Não (Padrão: Nome do plano)
 - **Descrição:** Nome do canal a ser criado no Teams.
 
-### -channelDescription
+### ``-channelDescription``
 
 - **Tipo:** String
 - **Obrigatório:** Não (Padrão: "Canal para gerenciamento de tarefas do Planner - PlanName")
