@@ -35,8 +35,7 @@ Este script em PowerShell automatiza a criação de um plano no Microsoft Planne
 
 ## Pré-requisitos
 
-- PowerShell versão 7 ou superior
-- Módulos do Azure e Microsoft Graph devidamente instalados e configurados
+- PowerShell versão 5 ou superior
 
 ## Funcionalidades
 
