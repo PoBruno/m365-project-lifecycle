@@ -66,7 +66,7 @@ Este script em PowerShell automatiza a criação de um plano no Microsoft Planne
 
 ## Modelos de Planos em CSV
 
-Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, recomendamos a utilização de arquivos CSV padronizados. Abaixo estão as diretrizes para criar e usar esses arquivos:
+Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, ultilizo arquivos CSV padronizados. Abaixo estão as diretrizes para criar e usar esses arquivos:
 
 ### Formato do Arquivo CSV
 
