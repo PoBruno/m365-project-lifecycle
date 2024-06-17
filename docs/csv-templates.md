@@ -6,7 +6,7 @@
     - [Formato de Aquivo CSV](#formato-do-arquivo-csv)
     - [Estrutura do Arquivo CSV](#estrutura-do-arquivo-csv)
     - [Exemplo de Template: Projeto Migração SQL Server](#exemplo-de-template-projeto-migracao-sql-server)
-    - [Criação de um Banco de Templates](#criacao-de-um-banco-de-templates)
+    - [Criando um Banco de Templates](#criando-um-banco-de-templates)
     - [Como Utilizar os Templates](#como-utilizar-os-templates)
 - [Parâmetros do Script](./script-parameters.md)
 - [Contribuições](./contributing.md)
@@ -41,7 +41,7 @@ tarefa 01 ; Categoria ; Descrição da tarefa 01
 ...
 ```
 
-## Exemplo de Template: Projeto Migração SQL Server
+## Exemplo de Template Projeto Migração SQL Server
 `\data\Template_MigraSQL.csv`
 |Task|Bucket|Details|
 |---|---|---|
@@ -60,7 +60,7 @@ tarefa 01 ; Categoria ; Descrição da tarefa 01
 
 <br>
 
-## Criação de um Banco de Templates
+## Criando de um Banco de Templates
 
 Recomendo a criação de um banco de templates próprios para diferentes tipos de projetos. Isso facilitará a padronização e agilidade na criação de novos planos de projeto. Conseguindo gerenciar um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
