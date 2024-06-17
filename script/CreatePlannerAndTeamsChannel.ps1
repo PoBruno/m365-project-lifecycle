@@ -342,7 +342,7 @@ if ($teamDisplayName) {
     # Criar um novo canal
     $TeamChannel = Create-TeamChannel -accessToken $accessToken -teamId $groupID -channelDisplayName $channelDisplayName -channelDescription $channelDescription
 
-    if ($response) {
+    if ($TeamChannel) {
         Write-Host "Canal criado com sucesso." -ForegroundColor Green
         Write-Host "`n`t- Time  : $teamDisplayName`n`t- Canal : $channelDisplayName`n" -ForegroundColor Yellow
     } else {
