@@ -20,9 +20,9 @@ Este projeto visa estabelecer uma arquitetura lógica robusta para o gerenciamen
     cd m365-project-lifecycle/Scripts/
     ```
 
-2. Configure o aplicativo no Azure AD seguindo [este guia](./docs/azure-ad-setup.md).
+2. Configure o aplicativo no Azure AD seguindo [Este Guia](./docs/azure-ad-setup.md).
 
-3. Prepare seu arquivo CSV com os dados do projeto conforme [este exemplo](./docs/csv-templates.md).
+3. Prepare seu arquivo CSV com os dados do projeto conforme [Este Exemplo](./docs/csv-templates.md).
     - Templates de csv na pasta [./script/templates](./script/templates)
 
 4. Execute o script `Create-PlannerAndTeamsChannel.ps1` fornecendo os parâmetros necessários:
