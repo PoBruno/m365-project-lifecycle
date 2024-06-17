@@ -1,3 +1,26 @@
+## Índice
+
+## Índice
+
+- [Visão Geral](#visao-geral)
+- [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
+- [Preparando o Arquivo CSV](./csv-templates.md)
+- [Modelos de Planos em CSV](./csv-templates.md)
+- [Parâmetros do Script](./script-parameters.md)
+- [Contribuições](./contributing.md)
+    - [Abra uma Issue](#abra-uma-issue)
+    - [Fork do Repositório](#fork-do-repositorio)
+    - [Crie uma Branch](#crie-uma-branch)
+    - [Implemente as Mudanças](#implemente-as-mudancas)
+    - [Teste suas Mudanças](#teste-suas-mudancas)
+    - [Envie um Pull Request](#envie-um-pull-request)
+    - [Revisão e Discussão](#revisao-e-discussao)
+    - [Aceitação da Contribuição](#aceitacao-da-contribuicao)
+    - [Agradecimentos](#agradecimentos)
+
+<br>
+
+
 1. **Abra uma Issue**
     
     - Antes de começar a trabalhar em uma nova funcionalidade ou correção de bug, abra uma issue para discutir o que você gostaria de mudar.

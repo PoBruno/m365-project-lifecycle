@@ -1,3 +1,20 @@
+## Índice
+
+- [Visão Geral](#visao-geral)
+- [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
+    - [Acesse o Portal do Azure](#acesso-ao-portal-do-azure)
+    - [Crie um novo App Registration](#crie-um-novo-app-registration)
+    - [Configurar as Permissões de API (Microsoft Graph)](#configurar-as-permissoes-de-api-microsoft-graph)
+    - [Adicionar Permissões (Scope) do Microsoft Graph](#adicionar-permissoes-scope-do-microsoft-graph)
+    - [Conceder Permissões](#conceder-permissoes)
+    - [Gerar Client Secret](#gerar-client-secret)
+- [Preparando o Arquivo CSV](./csv-templates.md)
+- [Modelos de Planos em CSV](./csv-templates.md)
+- [Parâmetros do Script](./script-parameters.md)
+- [Contribuições](./contributing.md)
+
+<br>
+
 
 # Configuração do Aplicativo no Azure AD
 

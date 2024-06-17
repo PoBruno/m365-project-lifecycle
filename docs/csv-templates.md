@@ -1,7 +1,23 @@
+## Índice
+
+- [Visão Geral](#visao-geral)
+- [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
+- [Preparando o Arquivo CSV](./csv-templates.md)
+    - [Formato de Aquivo CSV](#formato-do-arquivo-csv)
+    - [Estrutura do Arquivo CSV](#estrutura-do-arquivo-csv)
+    - [Exemplo de Template: Projeto Migração SQL Server](#exemplo-de-template-projeto-migracao-sql-server)
+    - [Criação de um Banco de Templates](#criacao-de-um-banco-de-templates)
+    - [Como Utilizar os Templates](#como-utilizar-os-templates)
+- [Parâmetros do Script](./script-parameters.md)
+- [Contribuições](./contributing.md)
+
+<br>
+
 
 # Preparando o Arquivo CSV
 
 Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, utilize arquivos CSV padronizados.
+> **NOTA:** Templates de csv na pasta [./script/templates](./script/templates)
 
 
 ## Formato do Arquivo CSV
@@ -12,7 +28,6 @@ Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, u
     - **BucketName:** Nome do bucket onde a tarefa será categorizada.
     - **Details:** Detalhes ou descrição da tarefa.
 
-> **NOTA:** Templates de csv na pasta [./script/templates](./script/templates)
 
 ## Estrutura do Arquivo CSV
 

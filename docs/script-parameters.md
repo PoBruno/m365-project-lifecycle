@@ -1,3 +1,13 @@
+## Índice
+
+- [Visão Geral](#visao-geral)
+- [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
+- [Preparando o Arquivo CSV](./csv-templates.md)
+- [Modelos de Planos em CSV](./csv-templates.md)
+- [Contribuições](./contributing.md)
+
+<br>
+
 
 # Parâmetros do Script
 

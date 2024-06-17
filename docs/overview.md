@@ -4,7 +4,6 @@ Esta documentação fornece detalhes completos sobre como usar o script PowerShe
 
 ## Índice
 
-- [Visão Geral](#visao-geral)
 - [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
 - [Preparando o Arquivo CSV](./csv-templates.md)
 - [Executando o Script](#executando-o-script)
@@ -55,9 +54,8 @@ A documentação está organizada em seções para facilitar a navegação e a c
 Certifique-se de substituir os valores das variáveis pelos valores apropriados.
 
 Para mais detalhes sobre os parâmetros, consulte [aqui](./script-parameters.md).
-docs/csv-templates.md
-markdown
-Copy code
+
+
 # Preparando o Arquivo CSV
 
 Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, utilize arquivos CSV padronizados.
