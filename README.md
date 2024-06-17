@@ -4,7 +4,27 @@
 
 Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
-> **Nota:** Através de templates de projetos em CSV, é possível criar um banco de templates para diferentes tipos de projetos, facilitando a criação de planos e canais de forma rápida e padronizada.
+> **Nota:** Através de templates de projetos em CSV, é possível criar um banco de templates para diferentes tipos de projetos, facilitando a criação de planos e canais de forma rápida e padronizada. Meu objetivo final é estabelecer uma arquitetura lógica robusta para o um cilco de vida de gerenciamento de projetos dentro do Microsoft 365.
+
+# Índice
+
+- [Modelos de Planos em CSV](#modelos-de-planos-em-csv)
+    - [Formato do Arquivo CSV](#formato-do-arquivo-csv)
+    - [Estrutura do Arquivo CSV](#estrutura-do-arquivo-csv)
+- [Configuração do Aplicativo no Azure AD](#configuração-do-aplicativo-no-azure-ad)
+    - [Passos para Criar um App Registration](#passos-para-criar-um-app-registration)
+- [Usando Script](#usando-o-script)
+    - [Parâmetros](#parâmetros)
+        - [`-clientID`](#-clientid)
+        - [`-tenantID`](#-tenantid)
+        - [`-clientSecret`](#-clientsecret)
+        - [`-GroupID`](#-groupid)
+        - [`-PlanName`](#-planname)
+        - [`-csvFilePath`](#-csvfilepath)
+        - [`-teamsTabName`](#-teamstabname)
+        - [`-channelDisplayName`](#-channeldisplayname)
+        - [`-channelDescription`](#-channeldescription)
+
 
 ## Exemplo de Template: Projeto Migração SQL Server
 `\data\Template_MigraSQL.csv`
@@ -12,19 +32,15 @@ Este script em PowerShell automatiza a criação de um plano no Microsoft Planne
 |Task|Bucket|Details|
 |---|---|---|
 |Identificar Stakeholders|Planejamento|Identificar os stakeholders chave para o projeto de migração do SQL Server.|
-|Definir Objetivos do Projeto|Planejamento|Definir objetivos e metas claras para a migração do SQL Server.|
 |Elaborar Cronograma|Planejamento|Elaborar um cronograma detalhado para a migração.|
-|Analisar Infraestrutura Atual|Avaliação|Analisar a infraestrutura atual do SQL Server.|
 |Inventariar Banco de Dados|Avaliação|Inventariar todos os bancos de dados que serão migrados.|
 |Identificar Dependências|Avaliação|Identificar dependências e integrações com outros sistemas.|
-|Realizar Backup Completo|Pré-Migração|Realizar um backup completo dos bancos de dados.|
 |Configurar Novo Ambiente|Pré-Migração|Configurar o novo ambiente de SQL Server.|
 |Executar Testes de Migração|Pré-Migração|Executar testes de migração para garantir que tudo funcione corretamente.|
 |Migrar Dados|Migração|Migrar os dados do ambiente antigo para o novo ambiente de SQL Server.|
 |Validar Dados Migrados|Migração|Validar se todos os dados foram migrados corretamente.|
 |Ajustar Configurações Pós-Migração|Pós-Migração|Ajustar configurações e otimizar o novo ambiente.|
 |Realizar Testes de Desempenho|Pós-Migração|Realizar testes de desempenho no novo ambiente de SQL Server.|
-|Treinar Usuários e Administradores|Pós-Migração|Treinar usuários e administradores no uso do novo sistema.|
 |Obter Aprovação Final|Encerramento|Obter aprovação final dos stakeholders após a migração.|
 |Documentar Lições Aprendidas|Encerramento|Documentar lições aprendidas e realizar um encerramento formal do projeto.|
 
@@ -48,19 +64,93 @@ Este script em PowerShell automatiza a criação de um plano no Microsoft Planne
 <br>
 
 
+## Modelos de Planos em CSV
 
-### Objetivo e Visão Futura
+Para facilitar a criação e o gerenciamento de projetos no Microsoft Planner, recomendamos a utilização de arquivos CSV padronizados. Abaixo estão as diretrizes para criar e usar esses arquivos:
 
----
+### Formato do Arquivo CSV
 
-O objetivo final deste projeto é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos, facilitando a colaboração e a execução eficiente através das seguintes etapas:
+- **Delimitador:** Utilize ponto e vírgula (`;`) como delimitador. Isso permite o uso de vírgulas (`,`) no campo de descrição da tarefa sem problemas.
+- **Colunas Necessárias:** Certifique-se de que o arquivo CSV contenha as seguintes colunas:
+    - **TaskName:** Nome da tarefa.
+    - **BucketName:** Nome do bucket onde a tarefa será categorizada.
+    - **Details:** Detalhes ou descrição da tarefa.
 
-- **Automação com PowerShell**: Desenvolver e testar a lógica central do processo de gerenciamento de projetos utilizando PowerShell.
-- **Integração Completa**: Integrar Microsoft Planner para planejamento de tarefas, SharePoint para armazenamento e colaboração de documentos, e Teams para comunicação e execução de tarefas.
-- **Expansão Funcional**: Futuramente, adicionar funcionalidades como atribuição de datas de início e término, responsáveis por tarefas, e outros campos personalizados conforme necessário.
-- **Transição para Power Automate**: Uma vez validada a lógica de automação e integração no PowerShell, migrar para o Power Automate para uma solução mais escalável e acessível.
+### Estrutura do Arquivo CSV
+
+Seu arquivo CSV deve ter a seguinte estrutura:
+
+```
+TaskName;BucketName;Details 
+Identificar Stakeholders;Planejamento;Identificar os stakeholders chave para o projeto de migração do SQL Server. 
+Definir Objetivos do Projeto;Planejamento;Definir objetivos e metas claras para a migração do SQL Server. 
+Elaborar Cronograma;Planejamento;Elaborar um cronograma detalhado para a migração. 
+Analisar Infraestrutura Atual;Avaliação;Analisar a infraestrutura atual do SQL Server. 
+Inventariar Banco de Dados;Avaliação;Inventariar todos os bancos de dados que serão migrados.
+...
+```
+
+### Criação de um Banco de Templates
+
+Recomendo a criação de um banco de templates próprios para diferentes tipos de projetos. Isso facilitará a padronização e agilidade na criação de novos planos de projeto. Conseguindo gerenciar um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
+
+### Como Utilizar os Templates
+
+1. **Crie seus Templates:** Crie templates de projetos em formato CSV seguindo a estrutura fornecida e salve-os na pasta [./templates](./templates).
+2. **Padronize a Criação de Projetos:** Adotar internamente a prática de modelar o escopo de todos os projetos usando arquivos CSV com o formato padronizado.
+3. **Edite os Templates:** Personalize os templates conforme necessário para cada projeto específico. Utilize um editor de planilhas (como Microsoft Excel ou Google Sheets) para facilitar a edição.
+4. **Salve e Importe:** Certifique-se de salvar os arquivos CSV editados com ponto e vírgula (`;`) como delimitador. Use o script PowerShell fornecido para importar os arquivos CSV para o Microsoft Planner.
 
 <br>
+
+Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos para um clico de vida completa com os objetivos de criar um ambiente de gerenciamento de projetos no Microsoft 365 que ofereça os benefícios:
+
+- **Consistência:** Garantir que todos os projetos sigam uma estrutura padrão, facilitando o gerenciamento e a colaboração, criando um fluxo automatizado que liga ao inicio do script e finaliza arquivando os recursos.
+- **Agilidade:** Acelerar a criação de novos planos de projeto reutilizando templates existentes.
+- **Organização:** Centralizar todos os templates em um repositorio, facilitando o acesso e a manutenção.
+
+<br>
+
+ >**NOTA:** Os templates de arquivos CSV prontos para uso estão disponíveis na pasta [./templates](./templates). Use esses templates como ponto de partida para criar e personalizar seus próprios modelos de projeto.
+
+
+
+## Usando o Script
+
+1. Clone este repositório em sua máquina local:
+    ```bash
+    #Clonar o repositorio
+    git clone https://github.com/PoBruno/m365-project-lifecycle.git
+    #Acessar a pasta Scripts
+    cd m365-project-lifecycle/Scripts/
+    ```
+
+2. Configuração do Aplicativo no Azure AD:
+    - Siga os passos acima para criar um App Registration, adicionar permissões do Microsoft Graph e gerar um Client Secret.
+
+3. Abra o PowerShell (versão 7 ou superior).
+
+4. Execute o script `Create-PlannerAndTeamsChannel.ps1` fornecendo os parâmetros necessários:
+
+    ```powershell
+    .\Create-PlannerAndTeamsChannel.ps1 `
+        -clientID $clientID `
+        -tenantID $tenantID `
+        -clientSecret $clientSecret `
+        -csvFilePath $csvFilePath `
+        -PlanName $PlanName `
+        -GroupID $groupID `
+        [-teamsTabName $teamsTabName] `
+        [-channelDisplayName $channelDisplayName] `
+        [-channelDescription $channelDescription]
+    ```
+    Certifique-se de substituir os valores das variáveis pelos valores apropriados.
+
+5. Verifique se todas as operações foram executadas com sucesso.
+
+<br>
+
+
 
 ## Configuração do Aplicativo no Azure AD
 
@@ -105,64 +195,6 @@ Antes de executar o script, é necessário configurar um aplicativo no Azure AD 
     - Forneça uma descrição e escolha a duração da expiração do segredo.
     - Copie o valor do segredo gerado. Este será usado como `$clientSecret` no script PowerShell.
 
-
-
-## Uso
-
-1. Clone este repositório em sua máquina local:
-    ```bash
-    #Clonar o repositorio
-    git clone https://github.com/PoBruno/m365-project-lifecycle.git
-    #Acessar a pasta Scripts
-    cd m365-project-lifecycle/Scripts/
-    ```
-
-2. Configuração do Aplicativo no Azure AD:
-    - Siga os passos acima para criar um App Registration, adicionar permissões do Microsoft Graph e gerar um Client Secret.
-
-3. Abra o PowerShell (versão 7 ou superior).
-
-4. Execute o script `Create-PlannerAndTeamsChannel.ps1` fornecendo os parâmetros necessários:
-
-    ```powershell
-    .\Create-PlannerAndTeamsChannel.ps1 `
-        -clientID $clientID `
-        -tenantID $tenantID `
-        -clientSecret $clientSecret `
-        -csvFilePath $csvFilePath `
-        -PlanName $PlanName `
-        -GroupID $groupID `
-        [-teamsTabName $teamsTabName] `
-        [-channelDisplayName $channelDisplayName] `
-        [-channelDescription $channelDescription]
-    ```
-    Certifique-se de substituir os valores das variáveis pelos valores apropriados.
-
-5. Verifique se todas as operações foram executadas com sucesso.
-
-<br>
-
-## Modelos de Planos em CSV
-
-O arquivo CSV deve ter como delimitador ponto e virgula ``;``, pois desse modo podemos usar ``,`` para o campo destinado a descrição da tarefa. Deve conter as seguintes colunas para importação no Planner: `TaskName`, `BucketName` e `Details`. Templates de arquivos CSV estão disponíveis na pasta [./data](./data).
-
-### Estrutura do CSV
-
-- **TaskName**: Nome da tarefa a ser criada no Planner.
-- **BucketName**: Nome do bucket (categoria) ao qual a tarefa será associada.
-- **Details**: Detalhes adicionais relevantes para a tarefa.
-
-### Personalização e Expansão Futura
-
-Inicialmente projetei para importações básicas, o modelo de CSV pode ser expandido no futuro para incluir:
-
-- **Datas de Início e Término**: Para agendar tarefas.
-- **Responsáveis**: Para atribuir tarefas a membros da equipe.
-- **Outros Campos Personalizados**: Para atender a necessidades específicas de planejamento.
-
-### Exemplos e Documentação
-
-Para exemplos práticos de como estruturar seu arquivo CSV e detalhes sobre como expandir suas funcionalidades, consulte os modelos fornecidos na pasta [./data](./data).
 
 
 
