@@ -9,7 +9,7 @@ Este projeto visa estabelecer uma arquitetura lógica robusta para o gerenciamen
 ## Objetivos
 
 - **Consistência:** Garantir que todos os projetos sigam uma estrutura padrão.
-- **Agilidade:** Acelerar a criação de novos planos de projeto reutilizando templates existentes.
+- **Agilidade:** Automatizar acelerando a criação de recursos necessarios para o gerenciamento de um projeto.
 - **Organização:** Centralizar todos os templates em um repositório.
 
 ## Uso Rápido
