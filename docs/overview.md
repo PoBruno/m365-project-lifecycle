@@ -11,6 +11,8 @@ Esta documentação fornece detalhes completos sobre como usar o script PowerShe
 - [Parâmetros do Script](./script-parameters.md)
 - [Contribuições](./contributing.md)
 
+<br>
+
 ## Visão Geral
 
 Este script em PowerShell automatiza a criação de um Backlog de Projeto no **Microsoft Planner**, a criação de um canal no **Microsoft Teams** e o provisionamento de uma biblioteca de arquivos do **SharePoint**.
