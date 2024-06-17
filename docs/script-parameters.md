@@ -4,6 +4,14 @@
 - [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
 - [Preparando o Arquivo CSV](./csv-templates.md)
 - [Modelos de Planos em CSV](./csv-templates.md)
+- [Parâmetros do Script](./script-parameters.md)
+    - [-clientID](#-clientid)
+    - [-tenantID](#-tenantid)
+    - [-clientSecret](#-clientsecret)
+    - [-GroupID](#-groupid)
+    - [-PlanName](#-planname)
+    - [-csvFilePath](#-csvfilepath)
+    - [-teamsTabName](#-teamstabname)
 - [Contribuições](./contributing.md)
 
 <br>
