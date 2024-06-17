@@ -14,7 +14,7 @@ Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenci
 
 <br>
 
-> **Nota:** Criei a arquitetura de provisionamento dos recurso me aprofundando mais do Backlog do Planner, desse modo o que funcionou com um melhor gerenciamento foi adotar templates de escopo de projetos em CSV, desse modo é possível criar um banco de templates para diferentes tipos de projetos, facilitando o provisionamento do planos, de forma rápida e padronizada.
+> **Nota:** Criei a arquitetura de provisionamento dos recurso me aprofundando mais do Backlog do Planner, desse modo, o que funcionou com um melhor gerenciamento foi adotar templates de escopo de projetos em CSV. Criando um banco de templates para diferentes tipos de projetos, garante o gerenciamento do provisionamento o backlog do projeto de forma rápida e padronizada.
 
 <br>
 
