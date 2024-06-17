@@ -1,6 +1,6 @@
 ## Índice
 
-- [Visão Geral](#visao-geral)
+- [Visão Geral](/docs/overview.md)
 - [Configuração do Aplicativo no Azure AD](./azure-ad-setup.md)
 - [Preparando o Arquivo CSV](./csv-templates.md)
 - [Modelos de Planos em CSV](./csv-templates.md)
