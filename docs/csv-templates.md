@@ -5,7 +5,7 @@
 - [Preparando o Arquivo CSV](./csv-templates.md)
     - [Formato de Aquivo CSV](#formato-do-arquivo-csv)
     - [Estrutura do Arquivo CSV](#estrutura-do-arquivo-csv)
-    - [Exemplo de Template: Projeto Migração SQL Server](#exemplo-de-template-projeto-migracao-sql-server)
+    - [Exemplo de Template: Projeto Migração SQL Server](#Exemplo-de-Template-Projeto-Migração-SQL-Server)
     - [Criando um Banco de Templates](#criando-um-banco-de-templates)
     - [Como Utilizar os Templates](#como-utilizar-os-templates)
 - [Parâmetros do Script](./script-parameters.md)
@@ -13,9 +13,7 @@
 
 <br>
 
-[Teste de Indice](#Criando-de-um-Banco-de-Templates)
 
-# Teste de Indice
 
 # Preparando o Arquivo CSV
 
@@ -63,7 +61,7 @@ tarefa 01 ; Categoria ; Descrição da tarefa 01
 
 <br>
 
-## Criando de um Banco de Templates
+## Criando um Banco de Templates
 
 Recomendo a criação de um banco de templates próprios para diferentes tipos de projetos. Isso facilitará a padronização e agilidade na criação de novos planos de projeto. Conseguindo gerenciar um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
