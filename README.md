@@ -4,7 +4,19 @@
 
 Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
 
-> **Nota:** Através de templates de projetos em CSV, é possível criar um banco de templates para diferentes tipos de projetos, facilitando a criação de planos e canais de forma rápida e padronizada. Meu objetivo final é estabelecer uma arquitetura lógica robusta para o um cilco de vida de gerenciamento de projetos dentro do Microsoft 365.
+<br>
+
+Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos para um clico de vida completa com os objetivos de criar um ambiente de gerenciamento de projetos no Microsoft 365 que ofereça os benefícios:
+
+- **Consistência:** Garantir que todos os projetos sigam uma estrutura padrão, facilitando o gerenciamento e a colaboração, criando um fluxo automatizado que liga ao inicio do script e finaliza arquivando os recursos.
+- **Agilidade:** Acelerar a criação de novos planos de projeto reutilizando templates existentes.
+- **Organização:** Centralizar todos os templates em um repositorio, facilitando o acesso e a manutenção.
+
+<br>
+
+> **Nota:** Criei a arquitetura de provisionamento dos recurso me aprofundando mais do Backlog do Planner, desse modo o que funcionou com um melhor gerenciamento foi adotar templates de escopo de projetos em CSV, desse modo é possível criar um banco de templates para diferentes tipos de projetos, facilitando o provisionamento do planos, de forma rápida e padronizada.
+
+<br>
 
 # Índice
 
@@ -103,17 +115,9 @@ Recomendo a criação de um banco de templates próprios para diferentes tipos d
 
 <br>
 
-Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos para um clico de vida completa com os objetivos de criar um ambiente de gerenciamento de projetos no Microsoft 365 que ofereça os benefícios:
-
-- **Consistência:** Garantir que todos os projetos sigam uma estrutura padrão, facilitando o gerenciamento e a colaboração, criando um fluxo automatizado que liga ao inicio do script e finaliza arquivando os recursos.
-- **Agilidade:** Acelerar a criação de novos planos de projeto reutilizando templates existentes.
-- **Organização:** Centralizar todos os templates em um repositorio, facilitando o acesso e a manutenção.
-
-<br>
-
  >**NOTA:** Os templates de arquivos CSV prontos para uso estão disponíveis na pasta [./templates](./templates). Use esses templates como ponto de partida para criar e personalizar seus próprios modelos de projeto.
 
-
+<br>
 
 ## Usando o Script
 
