@@ -2,9 +2,9 @@
 
 ## Descrição
 
-Este script em PowerShell automatiza a criação de um plano no Microsoft Planner e dos canais associados em um time do Microsoft Teams, utilizando dados de um arquivo CSV. Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos integrando Planner, SharePoint e Teams.
+Este script em PowerShell automatiza a criação de um Backlog de Projeto no **Microsoft Planner** utilizando dados de um arquivo CSV, a criação de um canal associado ao Time do **Microsoft Teams** e ao provisionamento de uma **bilbiote de arquivos** do **SharePoint**. 
 
-<br>
+Esta automação inicial é parte de um projeto mais amplo para desenvolver um ciclo de vida completo de gerenciamento de projetos.
 
 Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenciamento de projetos para um clico de vida completa com os objetivos de criar um ambiente de gerenciamento de projetos no Microsoft 365 que ofereça os benefícios:
 
@@ -27,15 +27,15 @@ Meu objetivo final é estabelecer uma arquitetura lógica robusta para o gerenci
     - [Passos para Criar um App Registration](#passos-para-criar-um-app-registration)
 - [Usando Script](#usando-o-script)
     - [Parâmetros](#parâmetros)
-        - [`-clientID`](#-clientid)
-        - [`-tenantID`](#-tenantid)
-        - [`-clientSecret`](#-clientsecret)
-        - [`-GroupID`](#-groupid)
-        - [`-PlanName`](#-planname)
-        - [`-csvFilePath`](#-csvfilepath)
-        - [`-teamsTabName`](#-teamstabname)
-        - [`-channelDisplayName`](#-channeldisplayname)
-        - [`-channelDescription`](#-channeldescription)
+        - [-clientID](#-clientid)
+        - [-tenantID](#-tenantid)
+        - [-clientSecret](#-clientsecret)
+        - [-GroupID](#-groupid)
+        - [-PlanName](#-planname)
+        - [-csvFilePath](#-csvfilepath)
+        - [-teamsTabName](#-teamstabname)
+        - [-channelDisplayName](#-channeldisplayname)
+        - [-channelDescription](#-channeldescription)
 
 
 ## Exemplo de Template: Projeto Migração SQL Server
