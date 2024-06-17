@@ -12,6 +12,8 @@
     - [-PlanName](#-planname)
     - [-csvFilePath](#-csvfilepath)
     - [-teamsTabName](#-teamstabname)
+    - [-channelDisplayName](#-channeldisplayname)
+    - [-channelDescription](#-channeldescription)
 - [Contribuições](./contributing.md)
 
 <br>
